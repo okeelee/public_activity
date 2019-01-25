@@ -56,19 +56,19 @@ module PublicActivity
     # Set the ORM for use by PublicActivity.
     def self.orm(orm = nil)
       @@orm = orm unless orm.nil?
-      @@orm = :active_record if @orm.nil?
+      @@orm = :active_record if @@orm.nil?
       @@orm
     end
 
     def self.table_name(name = nil)
       @@table_name = name unless name.nil?
-      @@table_name = "activities" if @table_name.nil?
+      @@table_name = "activities" if @@table_name.nil?
       @@table_name
     end
 
     def self.enabled(en = nil)
       @@enabled = en unless en.nil?
-      @@enabled = true if @enabled.nil?
+      @@enabled = true if @@enabled.nil?
       @@enabled
     end
 
